@@ -1,0 +1,17 @@
+---
+title: "pset_test"
+output: html_notebook
+---
+
+# loading libaries
+```{r libraries}
+# install.packages("tidyverse")
+library(tidyverse)
+```
+
+# create vector
+```{r vector}
+my_vector <- c(2, 4, 6)
+# print your vector
+```
+

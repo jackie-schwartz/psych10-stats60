@@ -7,6 +7,10 @@ output: html_notebook
 ```{r libraries}
 # install.packages("tidyverse")
 library(tidyverse)
+
+# install.packages("remotes")
+library(remotes)
+remotes::install_github("rundel/ghclass")
 ```
 
 # create vector
@@ -14,4 +18,22 @@ library(tidyverse)
 my_vector <- c(2, 4, 6)
 # print your vector
 ```
+
+```{r}
+usethis::browse_github_token()
+usethis::edit_r_environ()
+GITHUB_PAT= "ea218d72381ee1191a0775f8e9f82d6a56c0875d"
+install.packages("gh")
+library(gh)
+library(remotes)
+library(git2r)
+library(askpass)
+library(credentials)
+ssh_keygen()
+# One option for authentication
+git_credential_ask(url="https://github.com/jackie-schwartz/psych10-stats60")
+# second option for authentication
+ssh_keygen(file = ssh_home("id_rsa"))
+```
+
 

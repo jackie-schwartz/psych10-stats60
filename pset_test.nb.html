@@ -1753,9 +1753,13 @@ summary {
 <h1>loading libaries</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBpbnN0YWxsLnBhY2thZ2VzKFwidGlkeXZlcnNlXCIpXG5saWJyYXJ5KHRpZHl2ZXJzZSlcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBpbnN0YWxsLnBhY2thZ2VzKFwidGlkeXZlcnNlXCIpXG5saWJyYXJ5KHRpZHl2ZXJzZSlcblxuIyBpbnN0YWxsLnBhY2thZ2VzKFwicmVtb3Rlc1wiKVxubGlicmFyeShyZW1vdGVzKVxucmVtb3Rlczo6aW5zdGFsbF9naXRodWIoXCJydW5kZWwvZ2hjbGFzc1wiKVxuYGBgIn0= -->
 <pre class="r"><code># install.packages(&quot;tidyverse&quot;)
-library(tidyverse)</code></pre>
+library(tidyverse)
+
+# install.packages(&quot;remotes&quot;)
+library(remotes)
+remotes::install_github(&quot;rundel/ghclass&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1764,12 +1768,36 @@ library(tidyverse)</code></pre>
 <h1>create vector</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXlfdmVjdG9yIDwtIGMoMiwgNCwgNilcbiMgcHJpbnQgeW91ciB2ZWN0b3JcbmBgYCJ9 -->
+<pre class="r"><code>my_vector &lt;- c(2, 4, 6)
+# print your vector</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudXNldGhpczo6YnJvd3NlX2dpdGh1Yl90b2tlbigpXG51c2V0aGlzOjplZGl0X3JfZW52aXJvbigpXG5HSVRIVUJfUEFUPSBcImVhMjE4ZDcyMzgxZWUxMTkxYTA3NzVmOGU5ZjgyZDZhNTZjMDg3NWRcIlxuaW5zdGFsbC5wYWNrYWdlcyhcImdoXCIpXG5saWJyYXJ5KGdoKVxubGlicmFyeShyZW1vdGVzKVxubGlicmFyeShnaXQycilcbmxpYnJhcnkoYXNrcGFzcylcbmxpYnJhcnkoY3JlZGVudGlhbHMpXG5zc2hfa2V5Z2VuKClcbiMgT25lIG9wdGlvbiBmb3IgYXV0aGVudGljYXRpb25cbmdpdF9jcmVkZW50aWFsX2Fzayh1cmw9XCJodHRwczovL2dpdGh1Yi5jb20vamFja2llLXNjaHdhcnR6L3BzeWNoMTAtc3RhdHM2MFwiKVxuIyBzZWNvbmQgb3B0aW9uIGZvciBhdXRoZW50aWNhdGlvblxuc3NoX2tleWdlbihmaWxlID0gc3NoX2hvbWUoXCJpZF9yc2FcIikpXG5gYGAifQ== -->
+<pre class="r"><code>usethis::browse_github_token()
+usethis::edit_r_environ()
+GITHUB_PAT= &quot;ea218d72381ee1191a0775f8e9f82d6a56c0875d&quot;
+install.packages(&quot;gh&quot;)
+library(gh)
+library(remotes)
+library(git2r)
+library(askpass)
+library(credentials)
+ssh_keygen()
+# One option for authentication
+git_credential_ask(url=&quot;https://github.com/jackie-schwartz/psych10-stats60&quot;)
+# second option for authentication
+ssh_keygen(file = ssh_home(&quot;id_rsa&quot;))</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAicHNldF90ZXN0IgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgojIGxvYWRpbmcgbGliYXJpZXMKYGBge3IgbGlicmFyaWVzfQojIGluc3RhbGwucGFja2FnZXMoInRpZHl2ZXJzZSIpCmxpYnJhcnkodGlkeXZlcnNlKQpgYGAKCiMgY3JlYXRlIHZlY3RvcgpgYGB7ciB2ZWN0b3J9Cm15X3ZlY3RvciA8LSBjKDIsIDQsIDYpCiMgcHJpbnQgeW91ciB2ZWN0b3IKYGBgCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAicHNldF90ZXN0IgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgojIGxvYWRpbmcgbGliYXJpZXMKYGBge3IgbGlicmFyaWVzfQojIGluc3RhbGwucGFja2FnZXMoInRpZHl2ZXJzZSIpCmxpYnJhcnkodGlkeXZlcnNlKQoKIyBpbnN0YWxsLnBhY2thZ2VzKCJyZW1vdGVzIikKbGlicmFyeShyZW1vdGVzKQpyZW1vdGVzOjppbnN0YWxsX2dpdGh1YigicnVuZGVsL2doY2xhc3MiKQpgYGAKCiMgY3JlYXRlIHZlY3RvcgpgYGB7ciB2ZWN0b3J9Cm15X3ZlY3RvciA8LSBjKDIsIDQsIDYpCiMgcHJpbnQgeW91ciB2ZWN0b3IKYGBgCgpgYGB7cn0KdXNldGhpczo6YnJvd3NlX2dpdGh1Yl90b2tlbigpCnVzZXRoaXM6OmVkaXRfcl9lbnZpcm9uKCkKR0lUSFVCX1BBVD0gImVhMjE4ZDcyMzgxZWUxMTkxYTA3NzVmOGU5ZjgyZDZhNTZjMDg3NWQiCmluc3RhbGwucGFja2FnZXMoImdoIikKbGlicmFyeShnaCkKbGlicmFyeShyZW1vdGVzKQpsaWJyYXJ5KGdpdDJyKQpsaWJyYXJ5KGFza3Bhc3MpCmxpYnJhcnkoY3JlZGVudGlhbHMpCnNzaF9rZXlnZW4oKQojIE9uZSBvcHRpb24gZm9yIGF1dGhlbnRpY2F0aW9uCmdpdF9jcmVkZW50aWFsX2Fzayh1cmw9Imh0dHBzOi8vZ2l0aHViLmNvbS9qYWNraWUtc2Nod2FydHovcHN5Y2gxMC1zdGF0czYwIikKIyBzZWNvbmQgb3B0aW9uIGZvciBhdXRoZW50aWNhdGlvbgpzc2hfa2V5Z2VuKGZpbGUgPSBzc2hfaG9tZSgiaWRfcnNhIikpCmBgYAoKCg==</div>
 
 
 
